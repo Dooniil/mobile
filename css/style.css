@@ -1,0 +1,612 @@
+@font-face {
+  font-family: "Golos";
+  src: url("../../fonts/Golos-Text_Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos";
+  src: url("../../fonts/Golos-Text_Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos";
+  src: url("../../fonts/Golos-Text_SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Russo One";
+  src: url("../../fonts/RussoOne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../../fonts/MuseoSansCyrl-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos";
+  src: url("../../fonts/Golos-Text_Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos";
+  src: url("../../fonts/Golos-Text_Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos";
+  src: url("../../fonts/Golos-Text_SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Russo One";
+  src: url("../../fonts/RussoOne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../../fonts/MuseoSansCyrl-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo__title {
+  margin-left: 13px;
+  font-family: "Russo One";
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #4c0085;
+}
+
+.social {
+  width: 60px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.social__wu {
+  background: url("../img/whats-app.svg") #48db45 center no-repeat;
+}
+
+.social__wu:hover {
+  background: url("../img/whats-app.svg") #35b732 center no-repeat;
+}
+
+.social__t {
+  background: url("../img/telegram.svg") #02adff center no-repeat;
+}
+
+.social__t:hover {
+  background: url("../img/telegram.svg") #008aca center no-repeat;
+}
+
+.title {
+  font-family: "Museo Sans Cyrl";
+  font-size: 2.5rem;
+  line-height: 4.1rem;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.15rem;
+}
+
+.title span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.subtitle {
+  font-family: "Golos";
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.subtitle span {
+  display: block;
+}
+
+.inputs__text, .inputs__btn {
+  width: 284px;
+  height: 86px;
+  padding: 28px 33px;
+  border-radius: 43px;
+}
+
+.inputs__text {
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: #4c0085;
+}
+
+.inputs__text::-webkit-input-placeholder {
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: rgba(76, 0, 133, 0.5);
+}
+
+.inputs__text:-ms-input-placeholder {
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: rgba(76, 0, 133, 0.5);
+}
+
+.inputs__text::-ms-input-placeholder {
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: rgba(76, 0, 133, 0.5);
+}
+
+.inputs__text::placeholder {
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: rgba(76, 0, 133, 0.5);
+}
+
+.inputs__btn {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 600;
+  color: #3e3300;
+  background: #ffd500;
+}
+
+.inputs__cb {
+  position: absolute;
+  margin-top: 20px;
+  margin-right: 14px;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+}
+
+.inputs__cb:checked + label::before {
+  background: url("../img/checkbox.svg") #ffd500 center no-repeat;
+}
+
+.inputs label {
+  font-family: "Golos";
+  font-size: 0.8rem;
+  line-height: 1.9rem;
+  text-align: center;
+  color: #fff;
+}
+
+.inputs label a {
+  border-bottom: #fff dashed 1px;
+  color: #fff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.inputs label a:hover {
+  border-color: #ffd500;
+  color: #ffd500;
+}
+
+.inputs label::before {
+  content: "";
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 14px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background: url("../img/checkbox.svg") #fff center no-repeat;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body {
+  font-family: "Golos", sans-serif;
+  font-weight: 400;
+  background-color: #7700d1;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header__container {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+
+.header__logo {
+  margin: 0 10px;
+  width: 220px;
+  height: 120px;
+  border-radius: 0px 0px 43px 43px;
+  background-color: #fff;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav__link {
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #ffd500;
+}
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.data__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-right: 26px;
+  font-family: "Golos";
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  text-align: start;
+  color: #fff;
+}
+
+.data__schedule {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.data__social-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.data__social:nth-child(1) {
+  margin-right: 6px;
+}
+
+.offer {
+  margin-top: 60px;
+  padding-bottom: 325px;
+  text-align: center;
+  background: url("../img/header-illustr.svg") center -50px no-repeat;
+}
+
+.offer__container {
+  background: url("../img/percent-97.svg") 0 150px no-repeat;
+  max-width: 1050px;
+}
+
+.offer__subtitle {
+  margin-top: 30px;
+}
+
+.offer__inputs {
+  margin-top: 40px;
+}
+
+.cost__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cost__routes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cost__routes_left {
+  -webkit-transform: translate(0, 150px);
+          transform: translate(0, 150px);
+}
+
+.cost__routes_right {
+  -webkit-transform: translate(-16px, -170px);
+          transform: translate(-16px, -170px);
+}
+
+.cost__title {
+  margin-top: 100px;
+}
+
+.cost__subtitle {
+  margin-top: 25px;
+}
+
+.cost__table {
+  display: inline-block;
+  margin-top: 60px;
+  border-radius: 40px;
+  border: 1px solid #fff;
+}
+
+.table {
+  border-spacing: 0;
+}
+
+.table__column {
+  padding: 22px 40px;
+  font-family: "Golos";
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  text-align: start;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.table__column {
+  border-top: 1px solid #fff;
+}
+
+.table__column:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+
+.table__column:hover {
+  color: #ffd500;
+}
+
+.table__column_white {
+  text-align: start;
+  color: #7700d1;
+  background-color: #fff;
+}
+
+.table__column_white:last-child {
+  border-radius: 0 38px 0 0;
+}
+
+.table__row:first-child > .table__column {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+}
+
+.table__row:first-child > .table__column:nth-child(n + 3) {
+  border-left: 1px solid #7700d1;
+}
+
+.table__row:nth-child(n + 2) > .table__column_white {
+  border-top: 1px solid #7700d1;
+}
+
+.table__row:last-child > .table__column_white {
+  border-radius: 0 0 0 38px;
+}
+
+.advantages__title {
+  margin-top: 130px;
+}
+
+.advantages__subtitle {
+  margin-top: 27px;
+}
+
+.advantages__container {
+  max-width: 1200px;
+}
+
+.advantages__grid {
+  margin-top: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.advantages__item {
+  padding: 50px 80px 40px 50px;
+  border-radius: 38px;
+  background-color: #fff;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.advantages__item:hover {
+  -webkit-box-shadow: 0px 9px 33px 5px rgba(64, 60, 16, 0.65);
+          box-shadow: 0px 9px 33px 5px rgba(64, 60, 16, 0.65);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.advantages__item-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advantages__item .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 57px;
+  min-height: 57px;
+  font-family: "Golos";
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  background-color: #7700d1;
+  border-radius: 100%;
+}
+
+.advantages__item-title {
+  margin-left: 30px;
+  font-family: "Golos";
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: start;
+  color: #4c0085;
+  font-weight: 600;
+}
+
+.advantages__item-text {
+  margin-top: 32px;
+  font-family: "Golos";
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: justify;
+  color: #4c0085;
+}
+
+.advantages__item-text > a {
+  font-weight: 600;
+  border-bottom: #7700d1 dashed 1px;
+  color: #7700d1;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.advantages__item-text > a:hover {
+  border-color: #ffd500;
+  color: #ffd500;
+}
+
+.advantages__more-link {
+  margin-top: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: #fff dashed 1px;
+  color: #fff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  font-family: "Golos";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.advantages__more-link:hover {
+  border-color: #ffd500;
+  color: #ffd500;
+}
+/*# sourceMappingURL=style.css.map */

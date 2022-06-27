@@ -1,0 +1,245 @@
+@import "./mixin/flex";
+@import "./color";
+@import "./font";
+@import "./common";
+
+body {
+  font-family: "Golos", sans-serif;
+  font-weight: 400;
+  background-color: $main-purple;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  &__container {
+    max-width: 1200px;
+    @include flex-sb-center;
+    transform: translate(0, -10px);
+  }
+
+  &__logo {
+    margin: 0 10px;
+    width: 220px;
+    height: 120px;
+    border-radius: 0px 0px 43px 43px;
+    background-color: #fff;
+  }
+}
+
+.nav {
+  @include flex;
+
+  &__item:not(:last-child) {
+    margin-right: 60px;
+  }
+
+  &__link {
+    @include font-customize(1rem, 1.9rem, start);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.data {
+  @include flex-h-center;
+
+  &__contact {
+    @include flex-column-start;
+    margin-right: 26px;
+    @include font-customize(1.5rem, 1.8rem, start);
+  }
+
+  &__schedule {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  &__social-block {
+    @include flex-h-center;
+  }
+
+  &__social:nth-child(1) {
+    margin-right: 6px;
+  }
+}
+
+.offer {
+  margin-top: 60px;
+  padding-bottom: 325px;
+  text-align: center;
+  background: url("../img/header-illustr.svg") center -50px no-repeat;
+
+  &__container {
+    background: url("../img/percent-97.svg") 0 150px no-repeat;
+    max-width: 1050px;
+  }
+
+  &__subtitle {
+    margin-top: 30px;
+  }
+
+  &__inputs {
+    margin-top: 40px;
+  }
+}
+
+.cost {
+  &__container {
+    @include flex-column-center;
+  }
+
+  &__routes {
+    @include flex-all-center;
+
+    &_left {
+      transform: translate(0, 150px);
+    }
+
+    &_right {
+      transform: translate(-16px, -170px);
+    }
+  }
+
+  &__title {
+    margin-top: 100px;
+  }
+
+  &__subtitle {
+    margin-top: 25px;
+  }
+
+  &__table {
+    display: inline-block;
+    margin-top: 60px;
+    border-radius: 40px;
+    border: 1px solid #fff;
+  }
+}
+
+.table {
+  border-spacing: 0;
+
+  &__column {
+    padding: 22px 40px;
+    @include font-customize(1.3rem, 1.9rem, start);
+    text-align: center;
+    transition: color 0.3s ease;
+
+    & {
+      border-top: 1px solid #fff;
+
+      &:not(:last-child) {
+        border-right: 1px solid #fff;
+      }
+    }
+    &:hover {
+      color: $accent;
+    }
+
+    &_white {
+      text-align: start;
+      color: $main-purple;
+      background-color: #fff;
+
+      &:last-child {
+        border-radius: 0 38px 0 0;
+      }
+    }
+  }
+
+  &__row:first-child > .table__column {
+    text-align: center;
+    border-top: none;
+    border-right: none;
+
+    &:nth-child(n + 3) {
+      border-left: 1px solid $main-purple;
+    }
+  }
+  &__row:nth-child(n + 2) > .table__column_white {
+    border-top: 1px solid $main-purple;
+  }
+
+  &__row:last-child > .table__column_white {
+    border-radius: 0 0 0 38px;
+  }
+}
+
+.advantages {
+  &__title {
+    margin-top: 130px;
+  }
+
+  &__subtitle {
+    margin-top: 27px;
+  }
+
+  &__container {
+    max-width: 1200px;
+  }
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 50px 80px 40px 50px;
+    border-radius: 38px;
+    background-color: #fff;
+    transition: 0.5s ease;
+
+    &:hover {
+      box-shadow: 0px 9px 33px 5px rgba(64, 60, 16, 0.65);
+      transform: translateY(-10px);
+    }
+
+    &-header {
+      @include flex-v-center;
+    }
+    .circle {
+      @include flex-all-center;
+      min-width: 57px;
+      min-height: 57px;
+      @include font-customize(1.4rem, 1.8rem, $c: #fff);
+      font-weight: 600;
+      background-color: $main-purple;
+      border-radius: 100%;
+    }
+    &-title {
+      margin-left: 30px;
+      @include font-customize(1.4rem, 1.8rem, start, $dark-purple);
+      font-weight: 600;
+    }
+
+    &-text {
+      margin-top: 32px;
+      @include font-customize(1.2rem, 1.8rem, justify, $dark-purple);
+      & > a {
+        font-weight: 600;
+        @include link-customize($main-purple);
+      }
+    }
+  }
+
+  &__more-link {
+    margin-top: 54px;
+    @include flex-h-center;
+    @include link-customize();
+    @include font-customize(1rem, 1.5rem);
+    font-weight: 600;
+  }
+}

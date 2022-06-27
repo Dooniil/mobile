@@ -1,0 +1,103 @@
+@import "./font";
+@import "./mixin/font-style";
+@import "./color";
+
+.logo {
+  @include flex-all-center;
+
+  &__title {
+    margin-left: 13px;
+    @include font-customize(1rem, 1.2rem, $c: $dark-purple, $ff: "Russo One");
+  }
+}
+
+.social {
+  width: 60px;
+  height: 40px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  &__wu {
+    background: url("../img/whats-app.svg") #48db45 center no-repeat;
+    &:hover {
+      background: url("../img/whats-app.svg") #35b732 center no-repeat;
+    }
+  }
+  &__t {
+    background: url("../img/telegram.svg") #02adff center no-repeat;
+    &:hover {
+      background: url("../img/telegram.svg") #008aca center no-repeat;
+    }
+  }
+}
+
+.title {
+  @include font-customize(2.5rem, 4.1rem, $ff: Museo Sans Cyrl);
+  letter-spacing: 0.15rem;
+  & span {
+    display: block;
+    font-size: 4.5rem;
+  }
+}
+
+.subtitle {
+  @include font-customize(1.3rem, 2rem);
+  & span {
+    display: block;
+  }
+}
+
+%input-size {
+  width: 284px;
+  height: 86px;
+  padding: 28px 33px;
+  border-radius: 43px;
+}
+
+.inputs {
+  &__text {
+    @extend %input-size;
+    @include font-customize(1rem, 1.9rem, start, $dark-purple);
+
+    &::placeholder {
+      @include font-customize(1rem, 1.9rem, start, rgba($color: $dark-purple, $alpha: 0.5));
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+    margin-left: 10px;
+    @extend %input-size;
+    font-weight: 600;
+    color: #3e3300;
+    background: $accent;
+  }
+
+  &__cb {
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 14px;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+  }
+  &__cb:checked + label::before {
+    background: url("../img/checkbox.svg") $accent center no-repeat;
+  }
+  label {
+    @include font-customize(0.8rem, 1.9rem);
+    a {
+      @include link-customize;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 14px;
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      background: url("../img/checkbox.svg") #fff center no-repeat;
+      transition: 0.2s ease;
+    }
+  }
+}

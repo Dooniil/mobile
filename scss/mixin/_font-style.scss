@@ -1,0 +1,18 @@
+@mixin font-customize($fz, $lh, $ta: center, $c: #fff, $ff: Golos) {
+    font-family: "#{$ff}";
+    font-size: $fz;
+    line-height: $lh;
+    text-align: $ta;
+    color: $c;
+}
+
+@mixin link-customize($color: #fff) {
+    border-bottom: $color dashed 1px;
+    color: $color;
+    transition: color 0.3s ease;
+
+    &:hover {
+        border-color: $accent;
+        color: $accent;
+    }
+}
